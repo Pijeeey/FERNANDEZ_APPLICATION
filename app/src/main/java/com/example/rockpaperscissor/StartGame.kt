@@ -20,7 +20,6 @@ class StartGame : AppCompatActivity() {
     // kung ano gamit ng bawat line. at may mga enedit din po ako dito para mag trial and error po
     // kung nagana ba yung saken mismong code
 
-    // note: sa mutable ginagamit yung viewfindID, sa view bindings naman is "when"
 
     private var binding:ActivityStartGameBinding? = null
 
