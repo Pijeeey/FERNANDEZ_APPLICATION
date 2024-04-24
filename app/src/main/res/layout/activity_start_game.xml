@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="YOU"
+        android:text="PJ"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-    <!-- for player 1 stars  -->
+    <!-- for player 1 score -->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
