@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartGame"
+    android:background="@color/white">
+
+<!--    CENTER LINE    -->
+    <View
+        android:id="@+id/centerView"
+        android:layout_width="384dp"
+        android:layout_height="2dp"
+        android:background="#ffbb99"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    NAME NG PLAYER   -->
+
+
+    <TextView
+        android:id="@+id/Player1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="YOU"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/centerView" />
+
+    <!--    NAME NG BOT   -->
+    <TextView
+        android:id="@+id/BotName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="BOT"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/centerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- for player 1 stars  -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Player1Name">
+
+        <ImageView
+            android:id="@+id/p1Circle1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="1dp"
+            android:src="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/p1Circle2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="1dp"
+            android:src="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/p1Circle3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="1dp"
+            android:src="@drawable/circle"/>
+    </LinearLayout>
+
+<!--  for bot/computer score  -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/BotName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/botCircle1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="1dp"
+            android:src="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/botCircle2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="1dp"
+            android:src="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/botCircle3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="1dp"
+            android:src="@drawable/circle" />
+    </LinearLayout>
+
+<!--    SELECT MOVE BUTTONS    -->
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnrock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_button"
+            android:text="rock"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnpaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_button"
+            android:text="paper"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnscissor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/gradient_button"
+            android:text="scissor"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--    ANIMATION PLAYER1 !  -->
+
+    <ImageView
+        android:id="@+id/handIconP1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.553"
+        tools:src="@drawable/rock" />
+
+    <!--    ANIMATION BOT !  -->
+    <ImageView
+        android:id="@+id/handIconBot"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:rotation="180"
+        tools:src="@drawable/paper"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/statusBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/handIconBot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/handIconBot"
+        app:layout_constraintTop_toTopOf="@+id/handIconBot" />
+
+    <TextView
+        android:id="@+id/statusP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/handIconP1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/handIconP1"
+        app:layout_constraintTop_toTopOf="@+id/handIconP1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout >
